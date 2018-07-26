@@ -1,13 +1,13 @@
 <table>
-  <h3> People Names </h3>
-
-  <% @figures.each do |figure| %>
-  <a href="/figures/<%= figure.id %>"><%= figure.name %></a>
-  <br>
-  <%figure.titles.each do |title|%>
-  <%= title.name %><br>
-  <% end %>
+  <h3>Person Name</h3>
+    <% @figures.each do |figure| %>
+      <a href="/figures/<%= figure.id %>"><%= figure.name %></a>
+      <ul>
+        <%figure.titles.each do |title|%>
+        <li><%=title.name%></li>
+        <%end%>
+      </ul>
   <% end %>
 </table>
 <br>
-<a class="button" href="/">Home Page</a>
+<a class="button" href="/">Home</a>
