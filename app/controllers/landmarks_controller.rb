@@ -6,7 +6,7 @@ end
 
 get '/landmarks' do
   @landmarks = Landmark.all
-  @figures = Figures.all
+  @figures = Figure.all
   erb :'landmarks/index'
 end
 
